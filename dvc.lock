@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  phonemize:
+    cmd: python src/phonemize.py --inp data/manifests/en/clean.jsonl --out 
+      data/manifests/en/phon.jsonl
+    deps:
+    - path: data/manifests/en/clean.jsonl
+      hash: md5
+      md5: 705bf8ba113cd201f35db08251359c79
+      size: 4999
+    - path: src/phonemize.py
+      hash: md5
+      md5: 81e26a4111ce816125bf2852e8b6f99d
+      size: 641
+    outs:
+    - path: data/manifests/en/phon.jsonl
+      hash: md5
+      md5: 0220be2a39f8c318364fbeed5d787772
+      size: 10453

@@ -1,0 +1,9 @@
+stages:
+  phonemize:
+    cmd: python src/phonemize.py --inp data/manifests/en/clean.jsonl --out 
+      data/manifests/en/phon.jsonl
+    deps:
+    - data/manifests/en/clean.jsonl
+    - src/phonemize.py
+    outs:
+    - data/manifests/en/phon.jsonl
