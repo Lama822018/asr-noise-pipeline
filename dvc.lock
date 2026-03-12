@@ -55,3 +55,20 @@ stages:
       hash: md5
       md5: 190e55050e19c5ca5c8bdd3e7e186a9e
       size: 36
+  plot10:
+    cmd: python src/plot_per.py --inp metrics/per_10.json --out 
+      figs/per_vs_noise.png --snr 10
+    deps:
+    - path: metrics/per_10.json
+      hash: md5
+      md5: 190e55050e19c5ca5c8bdd3e7e186a9e
+      size: 36
+    - path: src/plot_per.py
+      hash: md5
+      md5: 9a7a10f2681c265b5984b9aa6406ba12
+      size: 542
+    outs:
+    - path: figs/per_vs_noise.png
+      hash: md5
+      md5: bf26a070433c8522098fdf4035519553
+      size: 14231

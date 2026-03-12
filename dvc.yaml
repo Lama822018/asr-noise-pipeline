@@ -24,3 +24,11 @@ stages:
     - src/eval_per.py
     outs:
     - metrics/per_10.json
+  plot10:
+    cmd: python src/plot_per.py --inp metrics/per_10.json --out 
+      figs/per_vs_noise.png --snr 10
+    deps:
+    - metrics/per_10.json
+    - src/plot_per.py
+    outs:
+    - figs/per_vs_noise.png
