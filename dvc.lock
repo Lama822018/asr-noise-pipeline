@@ -17,3 +17,24 @@ stages:
       hash: md5
       md5: 0220be2a39f8c318364fbeed5d787772
       size: 10453
+  noise10:
+    cmd: python src/add_noise.py --inp data/manifests/en/phon.jsonl --out 
+      data/manifests/en/noisy_10.jsonl --noise data/noise/white.wav --snr 10
+    deps:
+    - path: data/manifests/en/phon.jsonl
+      hash: md5
+      md5: 0220be2a39f8c318364fbeed5d787772
+      size: 10453
+    - path: data/noise/white.wav
+      hash: md5
+      md5: eb1b21dc0153f7b9da5b2e2147da0f39
+      size: 1920044
+    - path: src/add_noise.py
+      hash: md5
+      md5: 385aec27024363c6b99d9c2bf305b335
+      size: 1379
+    outs:
+    - path: data/manifests/en/noisy_10.jsonl
+      hash: md5
+      md5: a195a3ffee1bf4c77339df0c193229bc
+      size: 10653

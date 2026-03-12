@@ -7,3 +7,12 @@ stages:
     - src/phonemize.py
     outs:
     - data/manifests/en/phon.jsonl
+  noise10:
+    cmd: python src/add_noise.py --inp data/manifests/en/phon.jsonl --out 
+      data/manifests/en/noisy_10.jsonl --noise data/noise/white.wav --snr 10
+    deps:
+    - data/manifests/en/phon.jsonl
+    - data/noise/white.wav
+    - src/add_noise.py
+    outs:
+    - data/manifests/en/noisy_10.jsonl
