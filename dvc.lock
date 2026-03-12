@@ -38,3 +38,20 @@ stages:
       hash: md5
       md5: a195a3ffee1bf4c77339df0c193229bc
       size: 10653
+  eval10:
+    cmd: python src/eval_per.py --inp data/manifests/en/hyp_10.jsonl --out 
+      metrics/per_10.json
+    deps:
+    - path: data/manifests/en/hyp_10.jsonl
+      hash: md5
+      md5: c15a524c708adef06fa371e94521948a
+      size: 10951
+    - path: src/eval_per.py
+      hash: md5
+      md5: 6095bfdd337d4b8c928f34e1caf8492f
+      size: 503
+    outs:
+    - path: metrics/per_10.json
+      hash: md5
+      md5: 190e55050e19c5ca5c8bdd3e7e186a9e
+      size: 36

@@ -16,3 +16,11 @@ stages:
     - src/add_noise.py
     outs:
     - data/manifests/en/noisy_10.jsonl
+  eval10:
+    cmd: python src/eval_per.py --inp data/manifests/en/hyp_10.jsonl --out 
+      metrics/per_10.json
+    deps:
+    - data/manifests/en/hyp_10.jsonl
+    - src/eval_per.py
+    outs:
+    - metrics/per_10.json
